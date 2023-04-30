@@ -25,20 +25,23 @@ function husky_lens_scan_objects () {
 input.onButtonPressed(Button.A, function () {
     music.setBuiltInSpeakerEnabled(true)
 })
+function Popit (Pins: any[]) {
+    OLED.writeStringNewLine("Popit is deployed ")
+    pins.digitalWritePin(DigitalPin.P0, 1)
+}
 input.onButtonPressed(Button.AB, function () {
     husky_lens_scan_objects()
 })
 input.onButtonPressed(Button.B, function () {
     music.setBuiltInSpeakerEnabled(false)
 })
-OLED.drawLoading(0)
 OLED.writeStringNewLine("Hello")
-OLED.drawLoading(10)
-OLED.writeStringNewLine("Loading")
-OLED.drawLoading(20)
 OLED.newLine()
+OLED.drawLoading(0)
+OLED.writeStringNewLine("Loading")
+OLED.drawLoading(10)
+OLED.drawLoading(20)
 OLED.drawLoading(30)
-OLED.clear()
 OLED.drawLoading(40)
 radio.setGroup(88)
 OLED.drawLoading(50)
@@ -52,4 +55,5 @@ music.startMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.ForeverInBac
 OLED.drawLoading(90)
 OLED.writeStringNewLine(" Banana")
 OLED.drawLoading(100)
+OLED.clear()
 OLED.clear()
